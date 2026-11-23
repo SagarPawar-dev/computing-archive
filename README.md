@@ -60,7 +60,7 @@ cyber-archive/
 * **Progress Tracker:**
   - [x] **Level 00 → 01:** First SSH connection, host key verification, `ls`, reading `readme` with `cat`
   - [x] **Level 01 → 02:** Reading files named with special characters (the dash `-`)
-  - [ ] **Level 02 → 03:** Reading files with spaces in their name
+  - [x] **Level 02 → 03:** Reading files with spaces in their name and leading dashes
   - [ ] **Level 03 → 04:** Hidden files in directories (`.hidden`)
   - [ ] **Level 04 → 05:** Inspecting human-readable files among binary files (`file`)
   - [ ] **Level 05 → 06:** Finding files by size and properties (`find`)

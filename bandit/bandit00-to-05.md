@@ -62,9 +62,46 @@ cat -- -
 
 ---
 
-## 📌 Bandit Level 2 → Level 3
+## 📌 Bandit Level 2 → Level 3 [COMPLETED ✅]
 
-* **Goal:** The password is stored in a file named `spaces in this filename` located in the home directory.
+* **Goal:** The password for the next level is stored in a file named `--spaces in this filename--` located in the home directory.
+* **Host:** `bandit.labs.overthewire.org`
+* **Port:** `2220`
+* **User:** `bandit2`
+* **Status:** Solved ✅
+
+### Commands Used:
+```bash
+# How to connect via SSH:
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+
+# View files in directory:
+ls -la
+
+# Reading file with both leading dashes and spaces:
+cat -- "--spaces in this filename--"
+
+# Alternative (Path prefix + quotes):
+cat ./"--spaces in this filename--"
+
+# Alternative (Tab-completion escape syntax):
+cat ./--spaces\ in\ this\ filename--
+```
+
+### What I Learned:
+* **The Double-Trap (Spaces + Leading Dashes):**
+  * Quotes (`"..."`) prevent the shell from breaking the filename into separate arguments on spaces.
+  * However, the shell removes quotes before executing the command. `cat` still receives `--spaces...` and treats the leading `--` as a command option/flag, throwing an `unexpected argument` error.
+* **Combining Solutions:**
+  * Using `--` explicitly tells `cat` to stop expecting flags, allowing `--spaces in this filename--` to be parsed as the target file.
+  * Prepending `./` ensures the argument starts with a dot rather than a dash, bypassing option parsers entirely.
+* **Tab Autocompletion:** Pressing `Tab` in the terminal automatically handles escape characters (like `\ `) for you.
+
+---
+
+## 📌 Bandit Level 3 → Level 4
+
+* **Goal:** The password is stored in a hidden file inside the `inhere` directory.
 * **Commands Used:**
   ```bash
   # TODO: Fill in after solving!
