@@ -132,9 +132,43 @@ cat ...Hiding-From-You
 
 ---
 
-## 📌 Bandit Level 4 → Level 5
+## 📌 Bandit Level 4 → Level 5 [COMPLETED ✅]
 
 * **Goal:** The password is stored in the only human-readable file in the `inhere` directory.
+* **Host:** `bandit.labs.overthewire.org`
+* **Port:** `2220`
+* **User:** `bandit4`
+* **Status:** Solved ✅
+
+### Commands Used:
+```bash
+# Connect via SSH:
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+
+# Move into folder:
+cd inhere
+
+# Inspect file types of all files in current folder:
+file ./*
+
+# Read the single file identified as ASCII text (e.g. -file07):
+cat ./-file07
+```
+
+### What I Learned:
+* **Extensions Don't Matter in Linux:** Unlike Windows, Linux does not care if a file ends in `.txt`, `.exe`, or `.pdf`. A file's true type is determined by its header and binary content.
+* **The `file` Command:** Reads the magic numbers/bytes of a file to determine whether it is ASCII text, executable binary, compressed archive, etc.
+* **The Asterisk Wildcard (`*`):** `file ./*` tells Linux to run `file` against every file in the current directory.
+* **Avoiding Terminal Corruption:** Running `cat` on raw binary data sends non-printable control characters to the terminal, often scrambling the font or causing random beeps. Using `file` first prevents this.
+
+---
+
+## 📌 Bandit Level 5 → Level 6
+
+* **Goal:** The password is stored in a file somewhere under the `inhere` directory and has all of the following properties:
+  1. Human-readable (ASCII text)
+  2. 1033 bytes in size
+  3. Not executable
 * **Commands Used:**
   ```bash
   # TODO: Fill in after solving!

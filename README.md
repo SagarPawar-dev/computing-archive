@@ -62,7 +62,7 @@ computing-archive/
   - [x] **Level 01 → 02:** Reading files named with special characters (the dash `-`)
   - [x] **Level 02 → 03:** Reading files with spaces in their name and leading dashes
   - [x] **Level 03 → 04:** Hidden files in directories (`ls -la`), understanding `.` and `..`
-  - [ ] **Level 04 → 05:** Inspecting human-readable files among binary files (`file`)
+  - [x] **Level 04 → 05:** Inspecting file types (`file ./*`), ASCII text vs. binary data
   - [ ] **Level 05 → 06:** Finding files by size and properties (`find`)
 
 #### 🐧 [Linux Upskill Challenge](https://linuxupskillchallenge.com/)
