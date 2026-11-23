@@ -1,4 +1,5 @@
 # Ignore actual passwords or credentials if saved locally
+*password*.txt
 *passwords*.txt
 *.secret
 *.key

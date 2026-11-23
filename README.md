@@ -59,7 +59,7 @@ cyber-archive/
 * **Description:** A beginner-friendly wargame played directly via SSH in the Linux terminal. It teaches fundamental commands, file navigation, hidden directories, permissions, file analysis, and shell quirks.
 * **Progress Tracker:**
   - [x] **Level 00 → 01:** First SSH connection, host key verification, `ls`, reading `readme` with `cat`
-  - [ ] **Level 01 → 02:** Reading files named with special characters (the dash `-`)
+  - [x] **Level 01 → 02:** Reading files named with special characters (the dash `-`)
   - [ ] **Level 02 → 03:** Reading files with spaces in their name
   - [ ] **Level 03 → 04:** Hidden files in directories (`.hidden`)
   - [ ] **Level 04 → 05:** Inspecting human-readable files among binary files (`file`)

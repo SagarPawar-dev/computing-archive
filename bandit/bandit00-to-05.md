@@ -33,9 +33,38 @@ cat readme
 
 ---
 
-## 📌 Bandit Level 1 → Level 2
+## 📌 Bandit Level 1 → Level 2 [COMPLETED ✅]
 
-* **Goal:** The password is stored in a file named `-` located in the home directory.
+* **Goal:** The password for the next level is stored in a file named `-` located in the home directory.
+* **Host:** `bandit.labs.overthewire.org`
+* **Port:** `2220`
+* **User:** `bandit1`
+* **Status:** Solved ✅
+
+### Commands Used:
+```bash
+# How to connect via SSH:
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+# View files in directory:
+ls -la
+
+# Read the file named '-':
+cat ./-
+# Alternative solution:
+cat -- -
+```
+
+### What I Learned:
+* **Standard Input (`stdin`) & the `-` Trap:** In Unix/Linux, a standalone dash `-` represents standard input (keyboard input). Typing `cat -` makes the terminal wait for keyboard input instead of reading a file named `-`.
+* **Path Prefix (`./`):** Prepending `./` explicitly instructs the shell to treat the argument as a filesystem path in the current directory, preventing programs from misinterpreting filenames as command-line flags.
+* **End-of-Options (`--`):** In POSIX command-line tools, `--` signifies the end of command options/flags. Anything following `--` is treated strictly as a filename or positional argument.
+
+---
+
+## 📌 Bandit Level 2 → Level 3
+
+* **Goal:** The password is stored in a file named `spaces in this filename` located in the home directory.
 * **Commands Used:**
   ```bash
   # TODO: Fill in after solving!
