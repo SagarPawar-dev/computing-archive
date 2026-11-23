@@ -4,13 +4,13 @@ Notes and takeaways from the first 5 levels of the Bandit wargame.
 
 ---
 
-## 📌 Bandit Level 0 → Level 1
+## 📌 Bandit Level 0 → Level 1 [COMPLETED ✅]
 
 * **Goal:** Connect to the remote server via SSH and read the password for Level 1 located in `readme`.
 * **Host:** `bandit.labs.overthewire.org`
 * **Port:** `2220`
 * **User:** `bandit0`
-* **Password:** `bandit0`
+* **Status:** Solved ✅
 
 ### Commands Used:
 ```bash
@@ -26,6 +26,8 @@ cat readme
 
 ### What I Learned:
 * **SSH (Secure Shell):** How to connect securely to a remote Linux machine over the network using port 2220 (`-p 2220`).
+* **Host Key Verification:** Understanding that the first time you connect to a server, SSH asks to verify and save its digital fingerprint in `~/.ssh/known_hosts`.
+* **Invisible Passwords:** Linux terminal hides cursor/typing when entering passwords for security.
 * **`ls` (List):** Shows what files exist in the folder. The `-la` flags show all hidden files (`-a`) and long file details like permissions and size (`-l`).
 * **`cat` (Concatenate):** Prints the contents of a file directly to the terminal screen.
 

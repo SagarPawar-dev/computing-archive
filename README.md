@@ -58,12 +58,12 @@ cyber-archive/
 * **My Notes & Writeups:** [`bandit/bandit00-to-05.md`](bandit/bandit00-to-05.md)
 * **Description:** A beginner-friendly wargame played directly via SSH in the Linux terminal. It teaches fundamental commands, file navigation, hidden directories, permissions, file analysis, and shell quirks.
 * **Progress Tracker:**
-  - [ ] **Levels 00–05:** SSH basics, files with spaces/dashes, human-readable data, hidden files, base64
-  - [ ] **Levels 06–10:** Searching the filesystem with `find`, `grep`, ownership & permissions
-  - [ ] **Levels 11–15:** Data compression, rot13, SSH private keys, SSL/TLS connections via `s_client`
-  - [ ] **Levels 16–20:** Port scanning with `nmap`, local network services, Unix domain sockets
-  - [ ] **Levels 21–25:** Scheduled tasks (`cron`), shell scripts, path traversal
-  - [ ] **Levels 26–34:** Escaping restricted shells, environment variables, Linux privilege escalation
+  - [x] **Level 00 → 01:** First SSH connection, host key verification, `ls`, reading `readme` with `cat`
+  - [ ] **Level 01 → 02:** Reading files named with special characters (the dash `-`)
+  - [ ] **Level 02 → 03:** Reading files with spaces in their name
+  - [ ] **Level 03 → 04:** Hidden files in directories (`.hidden`)
+  - [ ] **Level 04 → 05:** Inspecting human-readable files among binary files (`file`)
+  - [ ] **Level 05 → 06:** Finding files by size and properties (`find`)
 
 #### 🐧 [Linux Upskill Challenge](https://linuxupskillchallenge.com/)
 * **Official Website:** [linuxupskillchallenge.com](https://linuxupskillchallenge.com/)
