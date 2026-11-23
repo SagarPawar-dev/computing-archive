@@ -99,9 +99,42 @@ cat ./--spaces\ in\ this\ filename--
 
 ---
 
-## 📌 Bandit Level 3 → Level 4
+## 📌 Bandit Level 3 → Level 4 [COMPLETED ✅]
 
 * **Goal:** The password is stored in a hidden file inside the `inhere` directory.
+* **Host:** `bandit.labs.overthewire.org`
+* **Port:** `2220`
+* **User:** `bandit3`
+* **Status:** Solved ✅
+
+### Commands Used:
+```bash
+# Connect via SSH:
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+
+# Move into the folder:
+cd inhere
+
+# List all files including hidden ones:
+ls -la
+
+# Read the hidden file:
+cat ...Hiding-From-You
+```
+
+### What I Learned:
+* **The `.` and `..` Directory Entries:**
+  * In Unix filesystems, `.` (single dot) represents the **current directory**.
+  * `..` (double dot) represents the **parent directory** (one folder up).
+  * This is why `cd ..` moves up a directory, and why running `cat .` results in `cat: .: Is a directory`.
+* **Hidden Files Convention:** Any filename beginning with a dot (`.`) is hidden by default. Plain `ls` ignores them; you must pass `-a` (or `-la`) to reveal them.
+* **The Filename:** OverTheWire disguised the file as `...Hiding-From-You`. Because it starts with a dot, it was hidden alongside `.` and `..`.
+
+---
+
+## 📌 Bandit Level 4 → Level 5
+
+* **Goal:** The password is stored in the only human-readable file in the `inhere` directory.
 * **Commands Used:**
   ```bash
   # TODO: Fill in after solving!

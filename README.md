@@ -1,6 +1,6 @@
-# Cyber Archive 🛡️
+# Computing Archive
 
-> *"You learn security by building, not by consuming. The internet has a basement—grab a flashlight and go look."*
+> You learn security by building, not by consuming. The internet has a basement, grab a flashlight and go look.
 
 Welcome to my cybersecurity and systems engineering archive! This repository documents my hands-on journey from a complete beginner with zero command-line experience to understanding Linux internals, DevOps infrastructure, networking, and offensive security.
 
@@ -35,7 +35,7 @@ Welcome to my cybersecurity and systems engineering archive! This repository doc
 ## 🗂️ Repository Structure
 
 ```text
-cyber-archive/
+computing-archive/
 ├── README.md               # Main journey overview, clickable index & progress
 ├── .gitignore              # Ignored files (passwords, temp files)
 ├── bandit/                 # OverTheWire: Bandit notes & command breakdowns
@@ -61,7 +61,7 @@ cyber-archive/
   - [x] **Level 00 → 01:** First SSH connection, host key verification, `ls`, reading `readme` with `cat`
   - [x] **Level 01 → 02:** Reading files named with special characters (the dash `-`)
   - [x] **Level 02 → 03:** Reading files with spaces in their name and leading dashes
-  - [ ] **Level 03 → 04:** Hidden files in directories (`.hidden`)
+  - [x] **Level 03 → 04:** Hidden files in directories (`ls -la`), understanding `.` and `..`
   - [ ] **Level 04 → 05:** Inspecting human-readable files among binary files (`file`)
   - [ ] **Level 05 → 06:** Finding files by size and properties (`find`)
 
