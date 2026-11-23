@@ -1,0 +1,12 @@
+# Ignore actual passwords or credentials if saved locally
+*passwords*.txt
+*.secret
+*.key
+.env
+
+# Linux & Editor temp files
+*~
+*.swp
+*.swo
+.DS_Store
+.vscode/
