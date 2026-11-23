@@ -39,7 +39,8 @@ computing-archive/
 ├── README.md               # Main journey overview, clickable index & progress
 ├── .gitignore              # Ignored files (passwords, temp files)
 ├── bandit/                 # OverTheWire: Bandit notes & command breakdowns
-│   └── bandit00-to-05.md   # Levels 00 to 05 notes
+│   ├── bandit00-to-05.md   # Levels 00 to 05 notes (Completed ✅)
+│   └── bandit06-to-10.md   # Levels 06 to 10 notes
 ├── linux/                  # Linux fundamentals & command cheatsheets
 └── scripts/                # Custom automation tools & bash scripts
 ```
@@ -55,7 +56,9 @@ computing-archive/
 #### 🎮 [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/)
 * **Official Website:** [overthewire.org/wargames/bandit](https://overthewire.org/wargames/bandit/)
 * **Official Docs & Info:** [OverTheWire Wargames Info](https://overthewire.org/information/)
-* **My Notes & Writeups:** [`bandit/bandit00-to-05.md`](bandit/bandit00-to-05.md)
+* **My Notes & Writeups:**
+  * [`bandit/bandit00-to-05.md`](bandit/bandit00-to-05.md) *(Levels 00–05 ✅)*
+  * [`bandit/bandit06-to-10.md`](bandit/bandit06-to-10.md) *(Levels 06–10)*
 * **Description:** A beginner-friendly wargame played directly via SSH in the Linux terminal. It teaches fundamental commands, file navigation, hidden directories, permissions, file analysis, and shell quirks.
 * **Progress Tracker:**
   - [x] **Level 00 → 01:** First SSH connection, host key verification, `ls`, reading `readme` with `cat`
@@ -63,7 +66,12 @@ computing-archive/
   - [x] **Level 02 → 03:** Reading files with spaces in their name and leading dashes
   - [x] **Level 03 → 04:** Hidden files in directories (`ls -la`), understanding `.` and `..`
   - [x] **Level 04 → 05:** Inspecting file types (`file ./*`), ASCII text vs. binary data
-  - [ ] **Level 05 → 06:** Finding files by size and properties (`find`)
+  - [x] **Level 05 → 06:** Finding files by size and properties (`find`)
+  - [ ] **Level 06 → 07:** Searching root (`find /`), ownership (`-user`, `-group`), stderr redirection (`2>/dev/null`)
+  - [ ] **Level 07 → 08:** Searching patterns in files (`grep`)
+  - [ ] **Level 08 → 09:** Sorting and unique lines (`sort | uniq -u`)
+  - [ ] **Level 09 → 10:** Extracting strings from binary files (`strings`)
+  - [ ] **Level 10 → 11:** Base64 decoding (`base64 -d`)
 
 #### 🐧 [Linux Upskill Challenge](https://linuxupskillchallenge.com/)
 * **Official Website:** [linuxupskillchallenge.com](https://linuxupskillchallenge.com/)

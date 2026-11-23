@@ -163,15 +163,36 @@ cat ./-file07
 
 ---
 
-## 📌 Bandit Level 5 → Level 6
+## 📌 Bandit Level 5 → Level 6 [COMPLETED ✅]
 
 * **Goal:** The password is stored in a file somewhere under the `inhere` directory and has all of the following properties:
   1. Human-readable (ASCII text)
-  2. 1033 bytes in size
+  2. Exactly 1033 bytes in size
   3. Not executable
-* **Commands Used:**
-  ```bash
-  # TODO: Fill in after solving!
-  ```
-* **What I Learned:**
-  * *(Notes to be added)*
+* **Host:** `bandit.labs.overthewire.org`
+* **Port:** `2220`
+* **User:** `bandit5`
+* **Status:** Solved ✅
+
+### Commands Used:
+```bash
+# Connect via SSH:
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+
+# Move into target directory:
+cd inhere
+
+# Search for the file matching all criteria:
+find . -type f -size 1033c ! -executable
+
+# Read the file found (e.g. ./maybehere07/.file2):
+cat ./maybehere07/.file2
+```
+
+### What I Learned:
+* **The Power of `find`:** Unlike `ls` which only shows what is directly in front of you, `find` recursively searches entire directory trees based on specific attributes.
+* **Filtering by Type and Size:**
+  * `-type f`: Restricts search results strictly to regular files (ignores directories).
+  * `-size 1033c`: Filters files with an exact size in bytes (`c` stands for bytes / characters; `k` for kilobytes, `M` for megabytes).
+* **Negation with `!`:** Adding `! -executable` excludes any files with execution permissions.
+* **DevOps / Sysadmin Essential:** Finding files by exact size or modification date is how engineers track down runaway log files, corrupted backups, and planted malware.
