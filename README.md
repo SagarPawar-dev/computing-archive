@@ -2,7 +2,26 @@
 
 > *"You learn security by building, not by consuming. The internet has a basement—grab a flashlight and go look."*
 
-Welcome to my cybersecurity and systems engineering archive! This repository documents my hands-on journey from a complete beginner with zero prior command-line experience to understanding Linux internals, DevOps infrastructure, networking, and offensive security.
+Welcome to my cybersecurity and systems engineering archive! This repository documents my hands-on journey from a complete beginner with zero command-line experience to understanding Linux internals, DevOps infrastructure, networking, and offensive security.
+
+---
+
+## 📑 Table of Contents (Quick Index)
+
+* [👤 Profile](#-profile)
+* [🗂️ Repository Structure](#️-repository-structure)
+* [🗺️ The Learning Roadmap](#️-the-learning-roadmap)
+  * [Phase 1: Terminal & Linux Fluency (Current)](#phase-1-terminal--linux-fluency-current)
+    * [🎮 OverTheWire: Bandit](#-overthewire-bandit)
+    * [🐧 Linux Upskill Challenge](#-linux-upskill-challenge)
+    * [🛠️ SadServers](#️-sadservers)
+  * [Phase 2: Networking & The Web](#phase-2-networking--the-web)
+    * [🦈 Wireshark & Packet Analysis](#-wireshark--packet-analysis)
+    * [🕸️ PortSwigger Web Security Academy](#️-portswigger-web-security-academy)
+  * [Phase 3: The DevOps Bridge (Containers & Cloud)](#phase-3-the-devops-bridge-containers--cloud)
+    * [🐳 Docker & Container Security](#-docker--container-security)
+    * [☁️ CloudGoat & Kubernetes Goat](#️-cloudgoat--kubernetes-goat)
+* [📜 Golden Rules](#-golden-rules)
 
 ---
 
@@ -17,38 +36,77 @@ Welcome to my cybersecurity and systems engineering archive! This repository doc
 
 ```text
 cyber-archive/
-├── README.md               # Main journey overview & progress tracker
+├── README.md               # Main journey overview, clickable index & progress
 ├── .gitignore              # Ignored files (passwords, temp files)
 ├── bandit/                 # OverTheWire: Bandit notes & command breakdowns
-│   └── bandit00-to-05.md   # Levels 0 to 5 notes
+│   └── bandit00-to-05.md   # Levels 00 to 05 notes
 ├── linux/                  # Linux fundamentals & command cheatsheets
 └── scripts/                # Custom automation tools & bash scripts
 ```
 
 ---
 
-## 🗺️ Learning Milestones
+## 🗺️ The Learning Roadmap
+
+---
 
 ### Phase 1: Terminal & Linux Fluency (Current)
-- [ ] **OverTheWire: Bandit** (Levels 0–34)
-  - [ ] Levels 00–05: SSH, file inspection, weird filenames, base64
-  - [ ] Levels 06–10: Searching the filesystem (`find`), grep, permissions
-  - [ ] Levels 11–15: Compression, rot13, SSH keys, SSL/TLS connections
-  - [ ] Levels 16–20: Port scanning, local network services
-  - [ ] Levels 21–25: Cron jobs, scheduled tasks, shell scripting
-  - [ ] Levels 26–34: Restricted shells, privilege escalation
-- [ ] **Linux Upskill Challenge** (Managing a real remote Linux server)
-- [ ] **SadServers** (Scenario-based Linux troubleshooting)
+
+#### 🎮 [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/)
+* **Official Website:** [overthewire.org/wargames/bandit](https://overthewire.org/wargames/bandit/)
+* **Official Docs & Info:** [OverTheWire Wargames Info](https://overthewire.org/information/)
+* **My Notes & Writeups:** [`bandit/bandit00-to-05.md`](bandit/bandit00-to-05.md)
+* **Description:** A beginner-friendly wargame played directly via SSH in the Linux terminal. It teaches fundamental commands, file navigation, hidden directories, permissions, file analysis, and shell quirks.
+* **Progress Tracker:**
+  - [ ] **Levels 00–05:** SSH basics, files with spaces/dashes, human-readable data, hidden files, base64
+  - [ ] **Levels 06–10:** Searching the filesystem with `find`, `grep`, ownership & permissions
+  - [ ] **Levels 11–15:** Data compression, rot13, SSH private keys, SSL/TLS connections via `s_client`
+  - [ ] **Levels 16–20:** Port scanning with `nmap`, local network services, Unix domain sockets
+  - [ ] **Levels 21–25:** Scheduled tasks (`cron`), shell scripts, path traversal
+  - [ ] **Levels 26–34:** Escaping restricted shells, environment variables, Linux privilege escalation
+
+#### 🐧 [Linux Upskill Challenge](https://linuxupskillchallenge.com/)
+* **Official Website:** [linuxupskillchallenge.com](https://linuxupskillchallenge.com/)
+* **Community:** [reddit.com/r/linuxupskillchallenge](https://www.reddit.com/r/linuxupskillchallenge/)
+* **Description:** A free, month-long daily challenge that teaches practical Linux server administration on a live remote cloud machine.
+* **Status:** Scheduled after Bandit Phase 1.
+
+#### 🛠️ [SadServers](https://sadservers.com/)
+* **Official Website:** [sadservers.com](https://sadservers.com/)
+* **Description:** "Like LeetCode for Linux & DevOps." Live, broken Linux servers inside your browser where you must debug processes, network issues, and disk faults under operational constraints.
+* **Status:** Scheduled.
+
+---
 
 ### Phase 2: Networking & The Web
-- [ ] Network capture analysis with Wireshark (TCP/IP, DNS, HTTP)
-- [ ] Host an Nginx web server from scratch
-- [ ] PortSwigger Web Security Academy (SQLi, IDOR, Authentication)
+
+#### 🦈 [Wireshark & Packet Analysis](https://www.wireshark.org/)
+* **Official Website:** [wireshark.org](https://www.wireshark.org/)
+* **Official Docs:** [Wireshark User's Guide](https://www.wireshark.org/docs/)
+* **Description:** The world's foremost network protocol analyzer. Capturing live network packets to inspect the TCP 3-way handshake, DNS queries, and raw HTTP payloads.
+* **Status:** Upcoming.
+
+#### 🕸️ [PortSwigger Web Security Academy](https://portswigger.net/web-security)
+* **Official Website:** [portswigger.net/web-security](https://portswigger.net/web-security)
+* **Official Docs:** [Web Security Documentation](https://portswigger.net/web-security/all-materials)
+* **Description:** The premier, 100% free web security training lab built by the creators of Burp Suite. Covers SQL Injection, Cross-Site Scripting (XSS), Authentication vulnerabilities, and IDORs.
+* **Status:** Upcoming.
+
+---
 
 ### Phase 3: The DevOps Bridge (Containers & Cloud)
-- [ ] Docker containerization & container breakout labs
-- [ ] CI/CD pipeline automation & security (GitHub Actions)
-- [ ] Cloud infrastructure basics (AWS / IAM policies)
+
+#### 🐳 [Docker & Container Security](https://docs.docker.com/)
+* **Official Documentation:** [docs.docker.com](https://docs.docker.com/)
+* **Cheat Sheet & Security Guide:** [HackTricks Docker Security](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/docker-breakout)
+* **Description:** Understanding namespaces, cgroups, container isolation, and how misconfigurations (like mounting `/var/run/docker.sock` or running `--privileged`) lead to host takeover.
+* **Status:** Upcoming.
+
+#### ☁️ [CloudGoat & Kubernetes Goat](https://github.com/RhinoSecurityLabs/cloudgoat)
+* **CloudGoat (AWS):** [github.com/RhinoSecurityLabs/cloudgoat](https://github.com/RhinoSecurityLabs/cloudgoat)
+* **Kubernetes Goat:** [madhuakula.com/kubernetes-goat](https://madhuakula.com/kubernetes-goat/)
+* **Description:** Vulnerable-by-design cloud and Kubernetes environments designed to learn cloud misconfigurations, IAM privilege escalation, and cluster hacking.
+* **Status:** Upcoming.
 
 ---
 
