@@ -106,6 +106,13 @@ The bedrock. Developing complete fluency in headless Linux systems, shell naviga
 
 Understanding how computers talk to each other across cables, airwaves, and the global internet.
 
+* **CLI Networking Essentials (The Terminal Socket Bridge):**
+  * Before jumping into GUI analyzers, master command-line networking tools:
+    * `curl -v`: Inspecting raw HTTP headers, TLS handshakes, redirects, and status codes.
+    * `nc` (Netcat): The Swiss Army knife. Creating raw TCP/UDP listeners, port probing, banner grabbing, and piping streams across networks.
+    * `ss -tuln` / `lsof -i`: Inspecting active sockets, established connections, and listening ports on the host.
+    * `dig` / `nslookup`: Querying DNS records (A, AAAA, CNAME, MX, TXT) and understanding resolution chains.
+    * `ping` & `traceroute`: ICMP echo, hop counts, and diagnosing routing bottlenecks.
 * **Core Theory:**
   * OSI & TCP/IP models, packet encapsulation, MAC vs IP addressing, Subnetting (CIDR).
   * Protocols: ARP, ICMP, TCP (3-way handshake, flags, teardown), UDP, DNS, DHCP.
@@ -138,15 +145,16 @@ Moving from running other people's tools to writing custom automation and securi
 
 Understanding how modern software is built, packaged, shipped, and scaled automatically.
 
-* **Containers & Virtualization:**
-  * Docker: Images, layers, Dockerfiles, multi-stage builds, networking, volumes, Compose.
-  * Linux container internals: Namespaces (`pid`, `net`, `mnt`), cgroups, rootless execution.
+* **Containers & The Orchestration Bridge:**
+  * **Level 1 (Host Primatives):** Linux process isolation, namespaces (`pid`, `net`, `mnt`), cgroups, file descriptors, and environment variable inheritance (mastered in SadServers / Linux Upskill).
+  * **Level 2 (Single Container):** Docker images, layers, caching, multi-stage Dockerfiles, rootless containers.
+  * **Level 3 (Multi-Container Local Stacks):** Docker Compose. Managing multi-tier applications (frontend + backend + database + cache), internal bridge networks, volume mounts, and service discovery.
+  * > **Prerequisite Gate:** Never jump to Kubernetes until you can comfortably build, network, debug, and troubleshoot a multi-container stack in Docker Compose.
+  * **Level 4 (Clustered Orchestration):** Kubernetes architecture (Control Plane, API Server, etcd, Kubelet), Pods, Deployments, Services, ConfigMaps, Secrets, Ingress controllers.
 * **CI/CD Pipelines:**
   * GitHub Actions / GitLab CI: Automated testing, code linting, security checks, automated deployments.
 * **Infrastructure as Code (IaC):**
   * Terraform: Declarative cloud provisioning, state files, modules, multi-environment setups.
-* **Orchestration:**
-  * Kubernetes: Architecture (Control Plane, Kubelet, etcd), Pods, Deployments, Services, ConfigMaps, Ingress controllers.
 * **Observability:**
   * Metrics, logs, and traces: Prometheus, Grafana, Linux systemd journal logs.
 * **Milestone:** Write application code, push to Git, and have it automatically tested, containerized, and deployed to cloud infrastructure with zero manual intervention.
@@ -166,9 +174,10 @@ Learning the attacker methodology to identify vulnerabilities before malicious a
   * Windows: Service misconfigurations, unquoted service paths, token manipulation.
 * **Enterprise Networks & Active Directory:**
   * Kerberos authentication, Kerberoasting, AS-REP roasting, BloodHound domain mapping, Pass-the-Hash.
-* **Platforms:**
-  * [TryHackMe](https://tryhackme.com/) (Pre-Security → Complete Beginner → Jr Penetration Tester)
-  * [HackTheBox](https://www.hackthebox.com/) (Starting Point → Easy/Medium Linux & Windows Machines)
+* **The Methodology Bridge (Guided to Autonomous):**
+  * **Step 1 (Guided Foundations):** [TryHackMe](https://tryhackme.com/) (Pre-Security → Complete Beginner) to build baseline intuition.
+  * **Step 2 (Methodology Discipline):** TryHackMe Jr Penetration Tester path. Learning a strict, repeatable enumeration checklist rather than random guessing.
+  * **Step 3 (Unguided Autonomous Targets):** [HackTheBox](https://www.hackthebox.com/) (Starting Point → Easy Linux/Windows boxes) without hints or walkthroughs to build real-world persistence.
 * **Milestone:** Ability to conduct a structured penetration test against a network, compromise endpoints, and escalate to root/Domain Admin.
 
 ---
@@ -208,9 +217,14 @@ Translating technical capability into industry-recognized achievements and produ
 
 ---
 
-## 📜 Golden Rules
+## 📜 Golden Rules & Documentation Standard
 
 1. **Never copy-paste blindly:** If a command is used, know what every flag and pipe does before hitting Enter.
 2. **Build, don't just watch:** Reading or watching videos is passive; running into terminal errors and solving them is where real learning happens.
-3. **Document everything:** Explain why a solution works so future-you and fellow engineers can learn from it.
+3. **Write the "Why" before the "How":** Commands are easily forgotten; reasoning lasts forever. Every writeup follows this engineering mental model:
+   * **Problem:** What does the level/challenge prompt actually state?
+   * **Mental Model:** What system primitive (streams, permissions, sockets, inodes) makes this solvable?
+   * **Dead Ends:** What was tried first that failed, and why did it fail?
+   * **Solution:** The exact command line and a line-by-line flag breakdown.
+   * **Takeaway:** What foundational lesson connects this to real-world sysadmin or security work?
 4. **Security through understanding:** Attackers and defenders use the exact same operating system primitives. Learn how things work normally, and how they break becomes obvious.
