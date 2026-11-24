@@ -113,13 +113,16 @@ Understanding how computers talk to each other across cables, airwaves, and the 
     * `ss -tuln` / `lsof -i`: Inspecting active sockets, established connections, and listening ports on the host.
     * `dig` / `nslookup`: Querying DNS records (A, AAAA, CNAME, MX, TXT) and understanding resolution chains.
     * `ping` & `traceroute`: ICMP echo, hop counts, and diagnosing routing bottlenecks.
-* **Core Theory:**
+* **Core Theory & Protocols:**
   * OSI & TCP/IP models, packet encapsulation, MAC vs IP addressing, Subnetting (CIDR).
   * Protocols: ARP, ICMP, TCP (3-way handshake, flags, teardown), UDP, DNS, DHCP.
   * Web protocols: HTTP/1.1 vs HTTP/2, TLS/SSL handshake, certificate validation, WebSockets, REST APIs.
-* **Practical Labs:**
-  * **[Wireshark](https://www.wireshark.org/):** Live packet capture and traffic dissection (TCP streams, DNS queries, unencrypted payloads).
-  * **[PortSwigger Web Security Academy](https://portswigger.net/web-security):** The gold standard of web security training. Hands-on labs covering SQL Injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), Insecure Direct Object References (IDOR), and Server-Side Request Forgery (SSRF).
+* **Curated Learning Resources:**
+  * 🌐 **Interactive DNS Sandbox:** [Mess with DNS](https://messwithdns.com/) and [How DNS Works](https://howdns.works/) by Julia Evans (hands-on record experiments without buying domains).
+  * 📺 **Authoritative Video Lectures:** [Computer Networking Lectures by Jim Kurose](https://www.youtube.com/@JimKurose) (Author of *Computer Networking: A Top-Down Approach*).
+  * 📺 **Deep-Dive Protocol Engineering:** [Hussein Nasser](https://www.youtube.com/@hnasr) (In-depth breakdowns of TCP connections, HTTP status flows, and reverse proxies).
+  * 🦈 **Packet Analysis Labs:** [Wireshark Official Docs & Guides](https://www.wireshark.org/docs/).
+  * 🕸️ **Web Security Training:** [PortSwigger Web Security Academy](https://portswigger.net/web-security) (100% free hands-on labs from the creators of Burp Suite).
 * **Milestone:** Ability to intercept, dissect, and manipulate arbitrary network and web traffic between client and server.
 
 ---
@@ -150,7 +153,11 @@ Understanding how modern software is built, packaged, shipped, and scaled automa
   * **Level 2 (Single Container):** Docker images, layers, caching, multi-stage Dockerfiles, rootless containers.
   * **Level 3 (Multi-Container Local Stacks):** Docker Compose. Managing multi-tier applications (frontend + backend + database + cache), internal bridge networks, volume mounts, and service discovery.
   * > **Prerequisite Gate:** Never jump to Kubernetes until you can comfortably build, network, debug, and troubleshoot a multi-container stack in Docker Compose.
-  * **Level 4 (Clustered Orchestration):** Kubernetes architecture (Control Plane, API Server, etcd, Kubelet), Pods, Deployments, Services, ConfigMaps, Secrets, Ingress controllers.
+  * Level 4 (Clustered Orchestration): Kubernetes architecture (Control Plane, API Server, etcd, Kubelet), Pods, Deployments, Services, ConfigMaps, Secrets, Ingress controllers.
+* **Curated Learning Resources:**
+  * 📺 **Kernel & Container Internals:** [Containers from Scratch by Liz Rice (GOTO)](https://www.youtube.com/watch?v=8fi7uSYlOdc) (Building a working container runtime in ~100 lines of Go to demystify cgroups and namespaces).
+  * 📺 **Hands-on Multi-Container Course:** [Ultimate Docker Compose Tutorial by TechWorld with Nana](https://www.youtube.com/watch?v=SXwC9fSwct8) (Practical guide bridging single containers to multi-tier microservices).
+  * 📖 **Official Documentation:** [Docker Compose Docs](https://docs.docker.com/compose/) and [Kubernetes Documentation](https://kubernetes.io/docs/home/).
 * **CI/CD Pipelines:**
   * GitHub Actions / GitLab CI: Automated testing, code linting, security checks, automated deployments.
 * **Infrastructure as Code (IaC):**
@@ -175,9 +182,12 @@ Learning the attacker methodology to identify vulnerabilities before malicious a
 * **Enterprise Networks & Active Directory:**
   * Kerberos authentication, Kerberoasting, AS-REP roasting, BloodHound domain mapping, Pass-the-Hash.
 * **The Methodology Bridge (Guided to Autonomous):**
-  * **Step 1 (Guided Foundations):** [TryHackMe](https://tryhackme.com/) (Pre-Security → Complete Beginner) to build baseline intuition.
-  * **Step 2 (Methodology Discipline):** TryHackMe Jr Penetration Tester path. Learning a strict, repeatable enumeration checklist rather than random guessing.
+  * **Step 1 (Guided Foundations):** [TryHackMe: Pre-Security Path](https://tryhackme.com/path/outline/presecurity) & [Complete Beginner](https://tryhackme.com/path/outline/beginner) to build baseline intuition.
+  * **Step 2 (Methodology Discipline):** [TryHackMe: Jr Penetration Tester](https://tryhackme.com/path/outline/jrpenetrationtester) path. Learning a strict, repeatable enumeration checklist rather than random guessing.
   * **Step 3 (Unguided Autonomous Targets):** [HackTheBox](https://www.hackthebox.com/) (Starting Point → Easy Linux/Windows boxes) without hints or walkthroughs to build real-world persistence.
+* **Curated Learning Resources:**
+  * 📺 **Privilege Escalation Masterclass:** [Linux Privilege Escalation for Beginners by Heath Adams (The Cyber Mentor)](https://www.youtube.com/c/thecybermentor) (SUID abuse, sudo misconfigs, kernel exploits, and LinPEAS analysis).
+  * 🔍 **Methodology & Box Archives:** [IppSec Search Engine (ippsec.rocks)](https://ippsec.rocks/) & [IppSec YouTube Channel](https://www.youtube.com/@ippsec) (The gold-standard reference for how senior penetration testers think through unguided machines).
 * **Milestone:** Ability to conduct a structured penetration test against a network, compromise endpoints, and escalate to root/Domain Admin.
 
 ---
