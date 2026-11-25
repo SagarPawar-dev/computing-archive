@@ -77,20 +77,13 @@ computing-archive/
 * **Why Bandit for a web developer:** You will SSH into cloud servers constantly. You will debug permission errors, search log files, write deployment scripts, and pipe command output. Bandit trains all of this under time pressure.
 * **Documentation & Writeups:**
   * [`bandit/bandit00-to-05.md`](bandit/bandit00-to-05.md) *(Levels 00–05 Completed ✅)*
-  * [`bandit/bandit06-to-10.md`](bandit/bandit06-to-10.md) *(Levels 06–10 Active)*
+  * [`bandit/bandit06-to-10.md`](bandit/bandit06-to-10.md) *(Levels 06–10 Completed ✅)*
 * **Key Topics:** SSH, file permissions, streams (`stdin`, `stdout`, `stderr`), pipelines, `grep`, `find`, `sort`, `uniq`, `strings`, `base64`.
 * **Progress Checklist:**
-  - [x] **Level 00 → 01:** First SSH connection, host key verification, `ls`, `cat`
-  - [x] **Level 01 → 02:** Special character filenames, `stdin` vs argument parsing
-  - [x] **Level 02 → 03:** Files with spaces and leading dashes
-  - [x] **Level 03 → 04:** Hidden files (`ls -la`), directory pointers (`.` and `..`)
-  - [x] **Level 04 → 05:** File type identification, magic numbers (`file ./*`)
-  - [x] **Level 05 → 06:** Recursive file search by size/properties (`find`)
-  - [x] **Level 06 → 07:** Root filesystem search, ownership filters, `stderr` redirection (`2>/dev/null`)
-  - [x] **Level 07 → 08:** Pattern search in large files (`grep`)
-  - [x] **Level 08 → 09:** Sorting and finding unique lines (`sort | uniq -u`)
-  - [x] **Level 09 → 10:** Extracting text from binary files (`strings`)
-  - [ ] **Level 10 → 11:** Base64 decoding (`base64 -d`)
+  - [x] **Levels 00 → 05:** SSH basics, special filenames (`-`, spaces), hidden files (`.` / `..`), `file`, `find` ([writeups](bandit/bandit00-to-05.md))
+  - [x] **Levels 06 → 10:** Root `find /`, `stderr` (`2>/dev/null`), `grep`, `sort | uniq -u`, `strings`, `base64` ([writeups](bandit/bandit06-to-10.md))
+  - [ ] **Levels 11 → 15:** Text ciphers (`tr`), compression archives (`tar`/`gzip`/`bzip2`), SSH keys & ports (`nc`, `openssl`)
+  - [ ] **Levels 16 → 34:** Port scanning, SUID binaries, cron jobs, shell escapes, and Git internals
 
 #### 🐧 [Linux Upskill Challenge](https://linuxupskillchallenge.com/)
 * **Focus:** Daily remote Linux server administration tasks (package management, users, `systemd` services, UFW firewall, cron jobs, log monitoring) on a live cloud VPS. This is exactly what managing a deployed application looks like.

@@ -140,13 +140,13 @@ strings data.txt | grep "=="
 
 ---
 
-## 📌 Bandit Level 10 → Level 11
+## 📌 Bandit Level 10 → Level 11 [COMPLETED ✅]
 
 * **Goal:** The password for the next level is stored in the file `data.txt`, which contains base64 encoded data.
 * **Host:** `bandit.labs.overthewire.org`
 * **Port:** `2220`
 * **User:** `bandit10`
-* **Status:** In Progress ⏳
+* **Status:** Solved ✅
 
 ### Commands Used:
 ```bash
@@ -160,5 +160,12 @@ cat data.txt
 base64 -d data.txt
 ```
 
+### Engineering Breakdown (Why before How):
+* **Problem:** `data.txt` contains unreadable alphanumeric text ending in `=` / `==` padding instead of plain English words.
+* **Mental Model:** Base64 is an encoding scheme (not encryption) that represents raw binary or ASCII bytes using 64 safe printable characters (`A-Z`, `a-z`, `0-9`, `+`, `/`, with `=` as padding). Because it is reversible without any secret key, decoding it immediately reveals the original text.
+* **Dead Ends:** Treating Base64 output as a password directly or trying to inspect it with `cat` alone does not decode the underlying payload.
+
 ### What I Learned:
-* *(Notes to be added after solving!)*
+* **`base64 -d`:** Decodes Base64-encoded text back into its original form (`-d` = decode; `base64` without `-d` encodes).
+* **Encoding vs Encryption:** Encoding (like Base64) transforms data format for safe transport and has zero secrecy; anyone can reverse it. Encryption requires a secret key.
+* **Takeaway (Full Stack & Cloud relevance):** JWT payloads in web auth, HTTP Basic Auth headers, and Kubernetes Secrets all use Base64 encoding. Never assume Base64 hides sensitive data.
